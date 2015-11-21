@@ -25,7 +25,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func loadBlackstarButtonPressed(sender: AnyObject) {
-        let url = NSURL(string: "http://nme.assets.ipccdn.co.uk/images/2015DavidBowie_Press_191115.article_x4.jpg")!
+        let url = NSURL(string: "http://cdn.pitchfork.com/tracks/17839/homepage_large.d411b55d.jpg")!
         let myImageLoader = ImageLoader(url: url, imageCell: imageView)
         myImageLoader.loadImage()
     }
