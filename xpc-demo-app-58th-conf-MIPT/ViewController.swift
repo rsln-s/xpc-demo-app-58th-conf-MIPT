@@ -20,14 +20,16 @@ class ViewController: NSViewController {
     
     @IBAction func loadButtonPressed(sender: AnyObject) {
         let url = NSURL(string: urlField.stringValue)!
-        let myImageLoader = ImageLoader(url: url, imageCell: imageView)
+        let myImageLoader = ImageLoader(url: url)
         myImageLoader.loadImage()
+        imageView.image = myImageLoader.image
     }
     
     @IBAction func loadBlackstarButtonPressed(sender: AnyObject) {
         let url = NSURL(string: "http://cdn.pitchfork.com/tracks/17839/homepage_large.d411b55d.jpg")!
-        let myImageLoader = ImageLoader(url: url, imageCell: imageView)
+        let myImageLoader = ImageLoader(url: url)
         myImageLoader.loadImage()
+        imageView.image = myImageLoader.image
     }
 }
 

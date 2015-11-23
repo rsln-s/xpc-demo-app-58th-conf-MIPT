@@ -11,19 +11,17 @@ import AppKit
 class ImageLoader {
     var url: NSURL?
     var image: NSImage?
-    var imageCell: NSImageCell?
     
     func loadImage (){
         if let data = NSData(contentsOfURL: self.url!) {
             if let image = NSImage(data: data){
-                self.imageCell!.image = image
+                self.image = image
             }
         }
     }
     
-    init(url: NSURL, imageCell: NSImageCell){
+    init(url: NSURL){
         self.url = url
-        self.imageCell = imageCell
     }
 
 }
