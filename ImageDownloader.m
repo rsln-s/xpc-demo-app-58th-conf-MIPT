@@ -26,7 +26,6 @@
             return image;
         }
     }
-    printf("Loading failed");
     return nil;
 }
 

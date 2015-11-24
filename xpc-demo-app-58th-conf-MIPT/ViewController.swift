@@ -24,7 +24,14 @@ class ViewController: NSViewController {
         MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
             [weak self](image) in
             if let strongSelf = self{
-                strongSelf.imageView.image = image
+                if ((image) != nil){
+                    strongSelf.imageView.image = image
+                }else{
+                    let alert = NSAlert()
+                    alert.addButtonWithTitle("OK")
+                    alert.informativeText = "Failed to load image"
+                    alert.runModal()
+                }
             }
         }
     }
@@ -34,7 +41,14 @@ class ViewController: NSViewController {
         MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
             [weak self](image) in
             if let strongSelf = self{
-                strongSelf.imageView.image = image
+                if ((image) != nil){
+                    strongSelf.imageView.image = image
+                }else{
+                    let alert = NSAlert()
+                    alert.addButtonWithTitle("OK")
+                    alert.informativeText = "Failed to load image"
+                    alert.runModal()
+                }
             }
         }
     }
