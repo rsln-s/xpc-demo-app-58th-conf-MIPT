@@ -23,7 +23,9 @@ class ViewController: NSViewController {
         let url = NSURL(string: urlField.stringValue)!
         MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
             [weak self](image) in
-            self!.imageView.image = image
+            if let strongSelf = self{
+                strongSelf.imageView.image = image
+            }
         }
     }
     
@@ -31,7 +33,9 @@ class ViewController: NSViewController {
         let url = NSURL(string: "http://cdn.pitchfork.com/tracks/17839/homepage_large.d411b55d.jpg")!
         MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
             [weak self](image) in
-            self!.imageView.image = image
+            if let strongSelf = self{
+                strongSelf.imageView.image = image
+            }
         }
     }
 }
