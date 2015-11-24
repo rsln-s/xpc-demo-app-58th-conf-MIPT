@@ -14,7 +14,7 @@
 @property NSURL* url;
 @property NSImage* image;
 
--(void) loadImage;
+-(NSImage*) loadImage;
 -(id) initWithURL: (NSURL*) url;
 
 @end

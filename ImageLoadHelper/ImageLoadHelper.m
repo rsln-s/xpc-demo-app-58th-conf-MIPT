@@ -14,8 +14,7 @@
 // This implements the example protocol. Replace the body of this class with the implementation of this service's protocol.
 - (void)loadImage:(NSURL *)url withReply:(void (^)(NSImage *))reply {
     ImageDownloader* myLoader = [[ImageDownloader alloc] initWithURL:url];
-    myLoader.loadImage;
-    reply(myLoader.image);
+    reply([myLoader loadImage]);
 }
 
 @end

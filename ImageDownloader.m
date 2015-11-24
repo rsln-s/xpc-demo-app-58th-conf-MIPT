@@ -18,14 +18,16 @@
     return self;
 }
 
--(void) loadImage {
+-(NSImage*) loadImage {
     NSData* data = [NSData dataWithContentsOfURL:self.url];
     if (data) {
         NSImage* image = [[NSImage alloc] initWithData:data];
         if (image) {
-            self.image = image;
+            return image;
         }
     }
+    printf("Loading failed");
+    return nil;
 }
 
 @end
