@@ -9,9 +9,10 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
     @IBOutlet weak var urlField: NSTextField!
     @IBOutlet weak var imageView: NSImageCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,16 +21,18 @@ class ViewController: NSViewController {
     
     @IBAction func loadButtonPressed(sender: AnyObject) {
         let url = NSURL(string: urlField.stringValue)!
-        let myImageLoader = ImageDownloader(URL: url)
-        myImageLoader.loadImage()
-        imageView.image = myImageLoader.image
+        MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
+            (image) in
+            self.imageView.image = image
+        }
     }
     
     @IBAction func loadBlackstarButtonPressed(sender: AnyObject) {
         let url = NSURL(string: "http://cdn.pitchfork.com/tracks/17839/homepage_large.d411b55d.jpg")!
-        let myImageLoader = ImageDownloader(URL: url)
-        myImageLoader.loadImage()
-        imageView.image = myImageLoader.image
+        MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
+            (image) in
+            self.imageView.image = image
+        }
     }
 }
 
