@@ -22,16 +22,16 @@ class ViewController: NSViewController {
     @IBAction func loadButtonPressed(sender: AnyObject) {
         let url = NSURL(string: urlField.stringValue)!
         MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
-            (image) in
-            self.imageView.image = image
+            [weak self](image) in
+            self!.imageView.image = image
         }
     }
     
     @IBAction func loadBlackstarButtonPressed(sender: AnyObject) {
         let url = NSURL(string: "http://cdn.pitchfork.com/tracks/17839/homepage_large.d411b55d.jpg")!
         MyXPCConnector.sharedInstance.objectProxy.loadImage(url) {
-            (image) in
-            self.imageView.image = image
+            [weak self](image) in
+            self!.imageView.image = image
         }
     }
 }
