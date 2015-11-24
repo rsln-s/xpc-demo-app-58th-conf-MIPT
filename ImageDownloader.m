@@ -18,14 +18,20 @@
     return self;
 }
 
--(void) loadImage {
+-(NSImage*) loadImage {
     NSData* data = [NSData dataWithContentsOfURL:self.url];
     if (data) {
         NSImage* image = [[NSImage alloc] initWithData:data];
         if (image) {
-            self.image = image;
+            return image;
         }
     }
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setInformativeText:@"Failed to load image"];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert runModal];
+    return nil;
 }
 
 @end
