@@ -3,4 +3,3 @@
 //
 
 #import "ImageDownloader.h"
-#import "ImageLoadHelperProtocol.h"

@@ -11,36 +11,8 @@
 		449585881C00FF9A0073F7AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449585871C00FF9A0073F7AE /* ViewController.swift */; };
 		4495858A1C00FF9A0073F7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449585891C00FF9A0073F7AE /* Assets.xcassets */; };
 		4495858D1C00FF9A0073F7AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4495858B1C00FF9A0073F7AE /* Main.storyboard */; };
-		44B48F3B1C04708B003A181D /* ImageLoadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B48F3A1C04708B003A181D /* ImageLoadHelper.m */; };
-		44B48F3D1C04708B003A181D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B48F3C1C04708B003A181D /* main.m */; };
-		44B48F411C04708B003A181D /* ImageLoadHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 44B48F361C04708B003A181D /* ImageLoadHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		44B48F461C0470DB003A181D /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B48F301C046BA1003A181D /* ImageDownloader.m */; };
-		44B48F481C047251003A181D /* MyXPCConnnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B48F471C047251003A181D /* MyXPCConnnector.swift */; };
+		44B48F311C046BA1003A181D /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B48F301C046BA1003A181D /* ImageDownloader.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		44B48F3F1C04708B003A181D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4495857A1C00FF9A0073F7AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 44B48F351C04708B003A181D;
-			remoteInfo = ImageLoadHelper;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		44B48F451C04708B003A181D /* Embed XPC Services */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
-			dstSubfolderSpec = 16;
-			files = (
-				44B48F411C04708B003A181D /* ImageLoadHelper.xpc in Embed XPC Services */,
-			);
-			name = "Embed XPC Services";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		449585821C00FF9A0073F7AE /* xpc-demo-app-58th-conf-MIPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xpc-demo-app-58th-conf-MIPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,24 +24,10 @@
 		44B48F2E1C046BA1003A181D /* xpc-demo-app-58th-conf-MIPT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xpc-demo-app-58th-conf-MIPT-Bridging-Header.h"; sourceTree = "<group>"; };
 		44B48F2F1C046BA1003A181D /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageDownloader.h; path = ../ImageDownloader.h; sourceTree = "<group>"; };
 		44B48F301C046BA1003A181D /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageDownloader.m; path = ../ImageDownloader.m; sourceTree = "<group>"; };
-		44B48F361C04708B003A181D /* ImageLoadHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = ImageLoadHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
-		44B48F381C04708B003A181D /* ImageLoadHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageLoadHelperProtocol.h; path = ImageLoadHelper/ImageLoadHelperProtocol.h; sourceTree = SOURCE_ROOT; };
-		44B48F391C04708B003A181D /* ImageLoadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageLoadHelper.h; path = ImageLoadHelper/ImageLoadHelper.h; sourceTree = SOURCE_ROOT; };
-		44B48F3A1C04708B003A181D /* ImageLoadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ImageLoadHelper.m; path = ImageLoadHelper/ImageLoadHelper.m; sourceTree = SOURCE_ROOT; };
-		44B48F3C1C04708B003A181D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageLoadHelper/main.m; sourceTree = SOURCE_ROOT; };
-		44B48F3E1C04708B003A181D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImageLoadHelper/Info.plist; sourceTree = SOURCE_ROOT; };
-		44B48F471C047251003A181D /* MyXPCConnnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXPCConnnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4495857F1C00FF9A0073F7AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44B48F331C04708B003A181D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				449585841C00FF9A0073F7AE /* xpc-demo-app-58th-conf-MIPT */,
-				44B48F371C04708B003A181D /* ImageLoadHelper */,
 				449585831C00FF9A0073F7AE /* Products */,
 				44B48F2E1C046BA1003A181D /* xpc-demo-app-58th-conf-MIPT-Bridging-Header.h */,
 			);
@@ -93,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				449585821C00FF9A0073F7AE /* xpc-demo-app-58th-conf-MIPT.app */,
-				44B48F361C04708B003A181D /* ImageLoadHelper.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,26 +59,13 @@
 			children = (
 				449585851C00FF9A0073F7AE /* AppDelegate.swift */,
 				449585871C00FF9A0073F7AE /* ViewController.swift */,
-				44B48F471C047251003A181D /* MyXPCConnnector.swift */,
+				44B48F2F1C046BA1003A181D /* ImageDownloader.h */,
+				44B48F301C046BA1003A181D /* ImageDownloader.m */,
 				449585891C00FF9A0073F7AE /* Assets.xcassets */,
 				4495858B1C00FF9A0073F7AE /* Main.storyboard */,
 				4495858E1C00FF9A0073F7AE /* Info.plist */,
 			);
 			path = "xpc-demo-app-58th-conf-MIPT";
-			sourceTree = "<group>";
-		};
-		44B48F371C04708B003A181D /* ImageLoadHelper */ = {
-			isa = PBXGroup;
-			children = (
-				44B48F381C04708B003A181D /* ImageLoadHelperProtocol.h */,
-				44B48F391C04708B003A181D /* ImageLoadHelper.h */,
-				44B48F3A1C04708B003A181D /* ImageLoadHelper.m */,
-				44B48F2F1C046BA1003A181D /* ImageDownloader.h */,
-				44B48F301C046BA1003A181D /* ImageDownloader.m */,
-				44B48F3C1C04708B003A181D /* main.m */,
-				44B48F3E1C04708B003A181D /* Info.plist */,
-			);
-			path = ImageLoadHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,34 +78,15 @@
 				4495857E1C00FF9A0073F7AE /* Sources */,
 				4495857F1C00FF9A0073F7AE /* Frameworks */,
 				449585801C00FF9A0073F7AE /* Resources */,
-				44B48F451C04708B003A181D /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				44B48F401C04708B003A181D /* PBXTargetDependency */,
 			);
 			name = "xpc-demo-app-58th-conf-MIPT";
 			productName = "xpc-demo-app-58th-conf-MIPT";
 			productReference = 449585821C00FF9A0073F7AE /* xpc-demo-app-58th-conf-MIPT.app */;
 			productType = "com.apple.product-type.application";
-		};
-		44B48F351C04708B003A181D /* ImageLoadHelper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44B48F421C04708B003A181D /* Build configuration list for PBXNativeTarget "ImageLoadHelper" */;
-			buildPhases = (
-				44B48F321C04708B003A181D /* Sources */,
-				44B48F331C04708B003A181D /* Frameworks */,
-				44B48F341C04708B003A181D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ImageLoadHelper;
-			productName = ImageLoadHelper;
-			productReference = 44B48F361C04708B003A181D /* ImageLoadHelper.xpc */;
-			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -175,9 +99,6 @@
 				ORGANIZATIONNAME = MIPT;
 				TargetAttributes = {
 					449585811C00FF9A0073F7AE = {
-						CreatedOnToolsVersion = 7.1.1;
-					};
-					44B48F351C04708B003A181D = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
@@ -196,7 +117,6 @@
 			projectRoot = "";
 			targets = (
 				449585811C00FF9A0073F7AE /* xpc-demo-app-58th-conf-MIPT */,
-				44B48F351C04708B003A181D /* ImageLoadHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -211,13 +131,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44B48F341C04708B003A181D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,31 +138,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44B48F481C047251003A181D /* MyXPCConnnector.swift in Sources */,
 				449585881C00FF9A0073F7AE /* ViewController.swift in Sources */,
 				449585861C00FF9A0073F7AE /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44B48F321C04708B003A181D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44B48F461C0470DB003A181D /* ImageDownloader.m in Sources */,
-				44B48F3D1C04708B003A181D /* main.m in Sources */,
-				44B48F3B1C04708B003A181D /* ImageLoadHelper.m in Sources */,
+				44B48F311C046BA1003A181D /* ImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		44B48F401C04708B003A181D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 44B48F351C04708B003A181D /* ImageLoadHelper */;
-			targetProxy = 44B48F3F1C04708B003A181D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4495858B1C00FF9A0073F7AE /* Main.storyboard */ = {
@@ -372,28 +267,6 @@
 			};
 			name = Release;
 		};
-		44B48F431C04708B003A181D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ImageLoadHelper/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mipt.ImageLoadHelper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		44B48F441C04708B003A181D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ImageLoadHelper/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mipt.ImageLoadHelper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,14 +287,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		44B48F421C04708B003A181D /* Build configuration list for PBXNativeTarget "ImageLoadHelper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				44B48F431C04708B003A181D /* Debug */,
-				44B48F441C04708B003A181D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
