@@ -10,6 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var randTextField: NSTextField!
     @IBOutlet weak var urlField: NSTextField!
     @IBOutlet weak var imageView: NSImageCell!
     override func viewDidLoad() {
@@ -17,17 +18,29 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
     }
 
+    func loadImage(urlString: String){
+        let url = NSURL(string: urlString)!
+        let myImageLoader = ImageDownloader(URL: url)
+        let image = myImageLoader.loadImage()
+        if ((image) != nil){
+            self.imageView.image = image
+        }else{
+            let alert = NSAlert()
+            alert.addButtonWithTitle("OK")
+            alert.informativeText = "Failed to load image"
+            alert.runModal()
+        }
+    }
     
     @IBAction func loadButtonPressed(sender: AnyObject) {
-        let url = NSURL(string: urlField.stringValue)!
-        let myImageLoader = ImageDownloader(URL: url)
-        imageView.image = myImageLoader.loadImage()
+        loadImage(urlField.stringValue)
     }
     
     @IBAction func loadBlackstarButtonPressed(sender: AnyObject) {
-        let url = NSURL(string: "http://cdn.pitchfork.com/tracks/17839/homepage_large.d411b55d.jpg")!
-        let myImageLoader = ImageDownloader(URL: url)
-        imageView.image = myImageLoader.loadImage()
+        loadImage("http://floodmagazine.com/wp-content/uploads/2014/11/david-bowie_nothing-has-changed.jpeg")
+    }
+    @IBAction func getRandomNumberButtonPressed(sender: AnyObject) {
+        randTextField.stringValue = String(arc4random())
     }
 }
 

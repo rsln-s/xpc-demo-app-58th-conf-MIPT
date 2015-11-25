@@ -26,11 +26,6 @@
             return image;
         }
     }
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert addButtonWithTitle:@"OK"];
-    [alert setInformativeText:@"Failed to load image"];
-    [alert setAlertStyle:NSWarningAlertStyle];
-    [alert runModal];
     return nil;
 }
 
