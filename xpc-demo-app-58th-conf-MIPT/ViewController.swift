@@ -20,15 +20,19 @@ class ViewController: NSViewController {
 
     func loadImage(urlString: String){
         let url = NSURL(string: urlString)!
-        let myImageLoader = ImageDownloader(URL: url)
-        let image = myImageLoader.loadImage()
-        if ((image) != nil){
-            self.imageView.image = image
-        }else{
-            let alert = NSAlert()
-            alert.addButtonWithTitle("OK")
-            alert.informativeText = "Failed to load image"
-            alert.runModal()
+        
+        MyXPCConnector.sharedInstance.objectProxy.loadImage(url){
+            [weak self](image) in
+            if let strongSelf = self{
+                if ((image) != nil){
+                    strongSelf.imageView.image = image
+                }else{
+                    let alert = NSAlert()
+                    alert.addButtonWithTitle("OK")
+                    alert.informativeText = "Failed to load image"
+                    alert.runModal()
+                }
+            }
         }
     }
     
